@@ -6,8 +6,8 @@ DEV-xx-y-###
     -E - Exploit - Code and/or procedure which leverages a vulnerability to produce malicious effect. 
   ### - ID number (HEX)
   example:
-  DEV-BO-8AC13
-  Types:
+  DEV-BO-V-8AC13
+  Types (For V/E only):
     -BO - Buffer Overflow
     -PE - Privilege Escalation 
     -UC - Uncatagorized / Pending Catagorization
