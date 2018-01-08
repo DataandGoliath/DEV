@@ -1,12 +1,11 @@
-DEV-xx-y-###
+DEV-xx-Z###
   xx  - Type
-  y   - B / V / E
-    -B - Bug     - Non-exploitable code or execution error.
+  Z   - Class
     -V - Vuln    - Exploitable code or execution error, which may or may not have an exploit available.
-    -E - Exploit - Code and/or procedure which leverages a vulnerability to produce malicious effect. 
+    -X - Exploit - Code and/or procedure which leverages a vulnerability to produce malicious effect. 
   ### - ID number (HEX)
   example:
-  DEV-BO-V-8AC13
+  DEV-BO-V8AC13
   Types (For V/E only):
     -BO - Buffer Overflow
     -PE - Privilege Escalation 
