@@ -3,6 +3,7 @@ DEV-xx-Z###
   Z   - Class
     -V - Vuln    - Exploitable code or execution error, which may or may not have an exploit available.
     -X - Exploit - Code and/or procedure which leverages a vulnerability to produce malicious effect. 
+    -D - Denial of Service
   ### - ID number (HEX)
   example:
   DEV-BO-V8AC13
