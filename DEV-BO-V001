@@ -1,0 +1,9 @@
+DEV-BO-V001
+Infidel
+PLATFORM: Windows
+SOFTWARE: Vulnserver, all versions
+http://www.thegreycorner.com/2010/12/introducing-vulnserver.html
+The TRUN command is vulnerable to a buffer overflow attack.
+PROCEDURE:
+nc target port
+TRUN /.:/AAAA...A
